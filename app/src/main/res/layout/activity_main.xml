@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-         <ImageView
-             android:id="@+id/imageView1"
-             android:layout_width="110dp"
-             android:layout_height="110dp"
-             android:src="@drawable/nature" />
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="40dp"
-            android:paddingLeft="8dp"
-            android:text="My first nature"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgMounts"
             android:layout_width="110dp"
             android:layout_height="110dp"
-            android:src="@drawable/nature" />
+            android:src="@drawable/nature"/>
+
+        <RelativeLayout
+            android:paddingLeft="8dp"
+            android:paddingTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tWNature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="40dp"
-            android:paddingLeft="8dp"
-            android:text="My second nature"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Nature"/>
+        <TextView
+            android:id="@+id/tWForest"
+            android:layout_below="@id/tWNature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forest Forest Forest"/>
+        <TextView
+            android:id="@+id/tWCost"
+            android:layout_below="@id/tWForest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 000$"/>
+        </RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
